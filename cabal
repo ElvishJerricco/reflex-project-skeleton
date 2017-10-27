@@ -2,4 +2,4 @@
 
 DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
 
-nix-shell --add-root $DIR/dist-newstyle/gc-roots/gc-root --indirect $DIR/shell.nix --run "cabal $(printf "%q " "$@")"
+nix-shell -A shells.ghc --add-root $DIR/dist-newstyle/gc-roots/gc-root --indirect --run "cabal $(printf "%q " "$@")"
