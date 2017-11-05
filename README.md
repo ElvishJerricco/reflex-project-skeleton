@@ -3,8 +3,16 @@ Multi-package Reflex example
 
 This repo is an example of combining `cabal.project`, Nix,
 `reflex-platform`, and `jsaddle-warp` to drastically improve the
-developer experience. To build the project's backend and
-`jsaddle-warp` app, use the `./cabal` script:
+developer experience.
+
+First, run `./reflex-platform/try-reflex` at least once. We won't use
+it at all in this project, but it does some extra work to setup your
+system requirements automatically, namely installing Nix and
+configuring the Reflex binary cache.
+
+Once Nix is installed, everything else is mostly handled for you. To
+build the project's backend and `jsaddle-warp` app, use the `./cabal`
+script:
 
 ```bash
 $ ./cabal new-build all
