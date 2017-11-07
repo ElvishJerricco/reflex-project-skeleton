@@ -28,7 +28,7 @@ You can use GHCi with the `jsaddle-warp` app for much better dev
 cycles:
 
 ```bash
-$ ./cabal new-repl frontend-warp
+$ ./cabal new-repl frontend
 ```
 
 Motivation
