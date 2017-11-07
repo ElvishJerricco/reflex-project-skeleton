@@ -2,7 +2,7 @@ Multi-package Reflex example
 ---
 
 This repo is an example of combining `cabal.project`, Nix,
-`reflex-platform`, and `jsaddle-warp` to drastically improve the
+`reflex-platform`, and `jsaddle` to drastically improve the
 developer experience.
 
 First, run `./reflex-platform/try-reflex` at least once. We won't use
@@ -11,8 +11,8 @@ system requirements automatically, namely installing Nix and
 configuring the Reflex binary cache.
 
 Once Nix is installed, everything else is mostly handled for you. To
-build the project's backend and `jsaddle-warp` app, use the `./cabal`
-script:
+build the project's backend and `jsaddle-webkit2gtk` frontend app, use
+the `./cabal` script:
 
 ```bash
 $ ./cabal new-build all
@@ -24,7 +24,7 @@ To build the GHCJS app, use the `./cabal-ghcjs` script:
 $ ./cabal-ghcjs new-build all
 ```
 
-You can use GHCi with the `jsaddle-warp` app for much better dev
+You can use GHCi with the `jsaddle-webkit2gtk` app for much better dev
 cycles:
 
 ```bash
@@ -50,7 +50,7 @@ How it works
 ---
 
 See
-[developing-packages.md](https://github.com/reflex-frp/reflex-platform/blob/develop/docs/project-development.md).
+[project-development.md](https://github.com/reflex-frp/reflex-platform/blob/develop/docs/project-development.md).
 
 ---
 
