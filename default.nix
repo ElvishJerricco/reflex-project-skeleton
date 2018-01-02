@@ -13,6 +13,12 @@
     displayName = "Example Android App";
   };
 
+  ios.frontend = {
+    executableName = "frontend";
+    bundleIdentifier = "org.example.frontend";
+    bundleName = "Example iOS App";
+  };
+
   shells = {
     ghc = ["common" "backend" "frontend"];
     ghcjs = ["common" "frontend"];
