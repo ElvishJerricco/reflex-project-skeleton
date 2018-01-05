@@ -35,6 +35,59 @@ cycles:
 $ ./cabal new-repl frontend
 ```
 
+`nix-build`
+---
+
+Nix is useful for creating deterministic, production ready build
+products. You can use the `nix-build` command to build all the parts
+of the project with Nix.
+
+- Build everything
+
+  ```bash
+  $ nix-build
+  trace:
+
+  Skipping ios apps; system is x86_64-linux, but x86_64-darwin is needed.
+  Use `nix-build -A all` to build with remote machines.
+  See: https://nixos.org/nixos/manual/options.html#opt-nix.buildMachines
+
+
+  /nix/store/5p041yq3ldniji7xizrxihmhmr576vah-reflex-project
+
+  $ tree result
+  result
+  ├── android
+  │   └── frontend -> /nix/store/4w62ly3hi75zpdmiq52lk1m4kir660vc-android-app
+  ├── ghc
+  │   ├── backend -> /nix/store/bgraikacjv68lfcghkprj3mspwx9f2bn-backend-0.1.0.0
+  │   ├── common -> /nix/store/lcgz36j77y6w7jyd39b14zp00hfaxn3s-common-0.1.0.0
+  │   └── frontend -> /nix/store/h9dbc2dvh11g1saj52ndn8ys3kj6f03l-frontend-0.1.0.0
+  └── ghcjs
+      ├── common -> /nix/store/fgbmn6mjgh7gfdbgnb7a21fsb9175gmv-common-0.1.0.0
+      └── frontend -> /nix/store/hfpq2580jbvgm20p992v8qjdczvr20gm-frontend-0.1.0.0
+
+  9 directories, 0 files
+  ```
+
+- Build the backend
+
+  ```bash
+  $ nix-build -o backend-result -A ghc.backend
+  ```
+
+- Build the JS app
+
+  ```bash
+  $ nix-build -o frontend-result -A ghcjs.frontend
+  ```
+
+- Build the native frontend
+
+  ```bash
+  $ nix-build -o native-frontend-result -A ghc.frontend
+  ```
+
 Motivation
 ---
 
