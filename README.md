@@ -5,6 +5,10 @@ This repo is an example of combining `cabal.project`, Nix,
 `reflex-platform`, and `jsaddle` to drastically improve the
 developer experience.
 
+Either clone this repo with `--recurse-submodules`, or run `git
+submodule update --init --recursive` in this directory after cloning
+to make sure `reflex-platform` is checked out.
+
 First, run `./reflex-platform/try-reflex` at least once. We won't use
 it at all in this project, but it does some extra work to setup your
 system requirements automatically, namely installing Nix and
