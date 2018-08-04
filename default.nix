@@ -1,6 +1,6 @@
-{}:
+{ reflex-platform ? import ./reflex-platform {} }:
 
-(import ./reflex-platform {}).project ({ pkgs, ... }: {
+reflex-platform.project ({ pkgs, ... }: {
   packages = {
     common = ./common;
     backend = ./backend;
