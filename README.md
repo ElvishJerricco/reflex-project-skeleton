@@ -107,7 +107,7 @@ How it works
 ---
 
 See
-[project-development.md](https://github.com/reflex-frp/reflex-platform/blob/develop/docs/project-development.md).
+[project-development.rst](https://github.com/reflex-frp/reflex-platform/blob/develop/docs/project-development.rst).
 
 ---
 
